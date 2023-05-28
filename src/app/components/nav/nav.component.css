@@ -1,0 +1,41 @@
+.container {
+   height: 100%;
+   background: #fff;
+   color: #000000;
+}
+
+.sidenav {
+   width: 13rem;
+   color: black;
+   background: #fda3d3;
+}
+
+img {
+   width: 100%;
+}
+
+.sidenav a {
+   color: black;
+  }
+
+.sidenav i {
+   margin-right: .6rem;
+}
+
+.menu {
+   margin: 1rem 0 0 1rem;
+   color: white;
+   background: transparent;
+}
+
+.teste {
+   margin-bottom: 1rem;
+}
+
+.matbar {
+   background-color: #fda3d3;
+}
+
+.elementos {
+   direction: left;
+}

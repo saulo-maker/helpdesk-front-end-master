@@ -1,0 +1,33 @@
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side">
+        <img src="../../../assets/logoSalao.png" alt="Logo Salão de beleza">
+       <mat-nav-list class="nav-list">
+          <a mat-list-item routerLink="home">
+             Home
+          </a>
+          <a mat-list-item routerLink="/">
+             Técnicos
+          </a>
+          <a mat-list-item routerLink="cliente">
+             Clientes
+          </a>
+          <a mat-list-item routerLink="chamado">
+             Chamados
+          </a>
+          <a mat-list-item class="teste" routerLink="/">
+            Sair
+         </a>
+       </mat-nav-list>
+    </mat-drawer>
+
+    <div class="sidenav-content">
+      <mat-toolbar class="matbar">
+         <button class="menu mat-elevation-z8 teste" (click)="drawer.toggle()" mat-icon-button>
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>Sistema de Chamados Interno</span>
+      </mat-toolbar>
+       <router-outlet></router-outlet>
+    </div>
+
+ </mat-drawer-container>
