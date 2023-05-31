@@ -32,7 +32,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { ClienteComponent } from './components/cliente/cliente.component';
 import { HeaderComponent } from './components/header/header.component';
-import { ChamadoComponent } from './components/chamado/chamado.component';
+import { FuncionariosComponent } from './components/funcionarios/funcionarios.component';
 
 
 @NgModule({
@@ -42,7 +42,7 @@ import { ChamadoComponent } from './components/chamado/chamado.component';
     HomeComponent,
     ClienteComponent,
     HeaderComponent,
-    ChamadoComponent
+    FuncionariosComponent
   ],
   imports: [
     BrowserModule,

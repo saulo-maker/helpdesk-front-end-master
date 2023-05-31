@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Salao } from '../models/salao';
+import { Clientes } from '../models/Clientes';
 
 @Injectable({
   providedIn: 'root'
@@ -10,10 +10,10 @@ export class ClientesService {
 
   constructor(private http: HttpClient) { }
 
-  findAll(): Observable<Salao[]> {
+  // findAll(): Observable<Clientes[]> {
 
-    return this.http.get<Salao>('${API_CONFIG.baseUrl}/salao');
+  //   return this.http.get<Clientes>('${API_CONFIG.baseUrl}/clientes');
 
-  }
+  // }
 
 }

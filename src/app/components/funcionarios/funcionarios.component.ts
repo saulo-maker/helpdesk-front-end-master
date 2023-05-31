@@ -1,29 +1,28 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { Clientes } from 'src/app/models/Clientes';
+import { Funcionarios } from 'src/app/models/Funcionarios';
 import { ClientesService } from 'src/app/services/clientes.service';
 
 @Component({
-  selector: 'app-cliente',
-  templateUrl: './cliente.component.html',
-  styleUrls: ['./cliente.component.css']
+  selector: 'app-funcionarios',
+  templateUrl: './funcionarios.component.html',
+  styleUrls: ['./funcionarios.component.css']
 })
-export class ClienteComponent implements OnInit{
+export class FuncionariosComponent implements OnInit{
   
-  ELEMENT_DATA: Clientes[] = [
+  ELEMENT_DATA: Funcionarios[] = [
     {
-      cpf: '123.456.789-10',
-      nome: 'Valdinei Pereira',
-      email: 'valdiney@gmail.com',
+      cpf: '564.657.345-24',
+      nome: 'Luciana Silva Rocha',
+      email: 'LucianaSilva123@gmail.com',
       senha: '1234',
-      perfis: ['0'],
-      data: '13/02/2023'
+      perfis: ['0']
     }
   ]
 
-  displayedColumns: string[] = ['cpf', 'nome', 'data', 'edit', 'delete'];
-  dataSource = new MatTableDataSource<Clientes>(this.ELEMENT_DATA);
+  displayedColumns: string[] = ['cpf', 'nome', 'email', 'edit', 'delete'];
+  dataSource = new MatTableDataSource<Funcionarios>(this.ELEMENT_DATA);
 
   
   @ViewChild(MatPaginator) paginator: MatPaginator;

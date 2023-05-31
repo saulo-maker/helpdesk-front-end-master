@@ -1,10 +1,9 @@
-export interface Salao {
+export interface Funcionarios {
     nome: string;
     cpf: string;
     email: string;
     senha: string
     perfis: string[];
-    data: any;
 
 }
 
