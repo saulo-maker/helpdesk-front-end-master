@@ -33,6 +33,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ClienteComponent } from './components/cliente/cliente.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FuncionariosComponent } from './components/funcionarios/funcionarios.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { FuncionariosComponent } from './components/funcionarios/funcionarios.co
     HomeComponent,
     ClienteComponent,
     HeaderComponent,
-    FuncionariosComponent
+    FuncionariosComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

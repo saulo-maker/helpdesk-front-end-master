@@ -10,10 +10,10 @@ export class ClientesService {
 
   constructor(private http: HttpClient) { }
 
-  // findAll(): Observable<Clientes[]> {
+  //findAll(): Observable<Clientes[]> {
 
-  //   return this.http.get<Clientes>('${API_CONFIG.baseUrl}/clientes');
+   // return this.http.get<Clientes>('${API_CONFIG.baseUrl}/clientes');
 
-  // }
+  //}
 
 }
