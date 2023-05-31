@@ -1,5 +1,4 @@
 export interface Salao {
-    id: number;
     nome: string;
     cpf: string;
     email: string;

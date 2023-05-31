@@ -13,9 +13,8 @@ export class ChamadoComponent implements OnInit{
   
   ELEMENT_DATA: Salao[] = [
     {
-      id: 1,
-      nome: 'Valdinei Pereira',
       cpf: '123.456.789-10',
+      nome: 'Valdinei Pereira',
       email: 'valdiney@gmail.com',
       senha: '1234',
       perfis: ['0'],
@@ -23,7 +22,7 @@ export class ChamadoComponent implements OnInit{
     }
   ]
 
-  displayedColumns: string[] = ['id', 'nome', 'cpf', 'data', 'acoes'];
+  displayedColumns: string[] = ['cpf', 'nome', 'data', 'acoes'];
   dataSource = new MatTableDataSource<Salao>(this.ELEMENT_DATA);
 
   
