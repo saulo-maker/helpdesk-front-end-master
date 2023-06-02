@@ -10,9 +10,10 @@ import { ClientesService } from 'src/app/services/clientes.service';
   styleUrls: ['./cliente.component.css']
 })
 export class ClienteComponent implements OnInit{
-  
+
   ELEMENT_DATA: Clientes[] = [
     {
+      id: 1,
       cpf: '123.456.789-10',
       nome: 'Valdinei Pereira',
       email: 'valdiney@gmail.com',
@@ -22,10 +23,10 @@ export class ClienteComponent implements OnInit{
     }
   ]
 
-  displayedColumns: string[] = ['cpf', 'nome', 'data', 'edit', 'delete'];
+  displayedColumns: string[] = ['id', 'nome', 'data', 'edit', 'delete'];
   dataSource = new MatTableDataSource<Clientes>(this.ELEMENT_DATA);
 
-  
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(
@@ -47,6 +48,4 @@ export class ClienteComponent implements OnInit{
     })
 
   }
-
 }
-
