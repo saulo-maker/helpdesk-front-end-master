@@ -2,8 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Funcionarios } from 'src/app/models/Funcionarios';
-import { ClientesService } from 'src/app/services/clientes.service';
-import { MatDialog } from '@angular/material/dialog';
+import { FuncionariosService } from 'src/app/services/funcionarios.service';
 
 @Component({
   selector: 'app-funcionarios',
@@ -37,24 +36,24 @@ throw new Error('Method not implemented.');
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(
-    private service: ClientesService
+    private service: FuncionariosService
   ) { }
 
   ngOnInit(): void {
 
-    // this.findAll();
+    this.findAll();
 
   }
 
-  // findAll() {
+  findAll() {
 
-  //   this.service.findAll().subscribe(resposta => {
-  //     this.ELEMENT_DATA = resposta
-  //     this.dataSource = new MatTableDataSource<Salao>(resposta);
-  //     this.dataSource.paginator = this.paginator;
-  //   })
+    this.service.findAll().subscribe(resposta => {
+      this.ELEMENT_DATA = resposta
+      this.dataSource = new MatTableDataSource<Funcionarios>(resposta);
+      this.dataSource.paginator = this.paginator;
+    })
 
-  // }
+  }
 
 }
 
