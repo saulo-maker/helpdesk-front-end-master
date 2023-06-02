@@ -34,19 +34,19 @@ export class ClienteComponent implements OnInit{
 
   ngOnInit(): void {
 
-    // this.findAll();
+    this.findAll();
 
   }
  
-  // findAll() {
+  findAll() {
 
-  //   this.service.findAll().subscribe(resposta => {
-  //     this.ELEMENT_DATA = resposta
-  //     this.dataSource = new MatTableDataSource<Salao>(resposta);
-  //     this.dataSource.paginator = this.paginator;
-  //   })
+    this.service.findAll().subscribe(resposta => {
+      this.ELEMENT_DATA = resposta
+      this.dataSource = new MatTableDataSource<Clientes>(resposta);
+      this.dataSource.paginator = this.paginator;
+    })
 
-  // }
+  }
 
 }
 
