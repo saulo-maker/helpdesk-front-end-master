@@ -13,7 +13,7 @@ export class ClienteComponent implements OnInit{
 
   ELEMENT_DATA: Clientes[] = []
 
-  displayedColumns: string[] = ['id', 'nome', 'data', 'edit', 'delete'];
+  displayedColumns: string[] = ['id', 'nome', 'email', 'telefone', 'uf', 'edit', 'delete'];
   dataSource = new MatTableDataSource<Clientes>(this.ELEMENT_DATA);
 
 
@@ -30,7 +30,6 @@ export class ClienteComponent implements OnInit{
   }
  
   findAll() {
-
     this.service.findAll().subscribe(resposta => {
       this.ELEMENT_DATA = resposta
       this.dataSource = new MatTableDataSource<Clientes>(resposta);

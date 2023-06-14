@@ -8,14 +8,14 @@ import { Funcionarios } from '../models/Funcionarios';
 })
 export class FuncionariosService {
   
-  private apiURL : string;
+  readonly apiURL : string;
   
   constructor(private http: HttpClient) {
-    this.apiURL = "http://localhost:8080/funcionarios";
+    this.apiURL = "http://localhost:8080";
   }
 
-  public findAll(): Observable<Funcionarios[]> {
-    return this.http.get<Funcionarios[]>(this.apiURL);
+  findAll(): Observable<Funcionarios[]> {
+    return this.http.get<Funcionarios[]>(`${this.apiURL}/funcionario`);
   }
 
 }

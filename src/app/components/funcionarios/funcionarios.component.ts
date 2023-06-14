@@ -19,16 +19,18 @@ adicionarFuncionario() {
 throw new Error('Method not implemented.');
 }
 
-  ELEMENT_DATA: Funcionarios[] = [];
+  ELEMENT_DATA: Funcionarios[] = []
 
-  displayedColumns: string[] = ['id', 'comissao', 'email', 'fone', 'login', 'senha'];
+  displayedColumns: string[] = ['id', 'comissao', 'email', 'fone', 'login', 'senha', 'edit', 'delete'];
   dataSource = new MatTableDataSource<Funcionarios>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(
     private service: FuncionariosService
-  ) { }
+  ) { 
+    
+  }
 
   ngOnInit(): void {
 
@@ -36,15 +38,13 @@ throw new Error('Method not implemented.');
 
   }
 
-  findAll() {
 
+  findAll() {
     this.service.findAll().subscribe(resposta => {
-      this.ELEMENT_DATA = resposta
+      this.ELEMENT_DATA = resposta;
       this.dataSource = new MatTableDataSource<Funcionarios>(resposta);
       this.dataSource.paginator = this.paginator;
     })
 
   }
-
 }
-

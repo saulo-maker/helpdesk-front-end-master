@@ -15,9 +15,7 @@ export class ClientesService {
   }
 
   findAll(): Observable<Clientes[]> {
-
     return this.http.get<Clientes[]>(`${this.apiURL}/cliente`);
-
   }
 
 }

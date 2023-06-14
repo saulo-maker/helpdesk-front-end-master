@@ -1,5 +1,5 @@
 export interface Funcionarios {
-    id: BigInteger;
+    id: number;
     comissao: string;
     email: string;
     fone: string;
