@@ -19,19 +19,10 @@ adicionarFuncionario() {
 throw new Error('Method not implemented.');
 }
 
-  ELEMENT_DATA: Funcionarios[] = [
-    {
-      cpf: '564.657.345-24',
-      nome: 'Luciana Silva Rocha',
-      email: 'LucianaSilva123@gmail.com',
-      senha: '1234',
-      perfis: ['0']
-    }
-  ]
+  ELEMENT_DATA: Funcionarios[] = [];
 
-  displayedColumns: string[] = ['cpf', 'nome', 'email', 'edit', 'delete'];
+  displayedColumns: string[] = ['id', 'comissao', 'email', 'fone', 'login', 'senha'];
   dataSource = new MatTableDataSource<Funcionarios>(this.ELEMENT_DATA);
-
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 

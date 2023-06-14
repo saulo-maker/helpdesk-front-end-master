@@ -1,9 +1,9 @@
 export interface Funcionarios {
-    nome: string;
-    cpf: string;
+    id: BigInteger;
+    comissao: string;
     email: string;
-    senha: string
-    perfis: string[];
-
+    fone: string;
+    login: string;
+    senha: string;
 }
 

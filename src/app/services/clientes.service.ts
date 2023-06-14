@@ -7,12 +7,16 @@ import { Clientes } from '../models/Clientes';
   providedIn: 'root'
 })
 export class ClientesService {
+  
+  readonly apiURL : string;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.apiURL = "http://localhost:8080";
+  }
 
   findAll(): Observable<Clientes[]> {
 
-    return this.http.get<Clientes>('${API_CONFIG.baseUrl}/clientes');
+    return this.http.get<Clientes[]>(`${this.apiURL}/cliente`);
 
   }
 

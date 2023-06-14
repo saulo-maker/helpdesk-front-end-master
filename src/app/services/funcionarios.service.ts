@@ -7,13 +7,15 @@ import { Funcionarios } from '../models/Funcionarios';
   providedIn: 'root'
 })
 export class FuncionariosService {
+  
+  private apiURL : string;
+  
+  constructor(private http: HttpClient) {
+    this.apiURL = "http://localhost:8080/funcionarios";
+  }
 
-  constructor(private http: HttpClient) { }
-
-  findAll(): Observable<Funcionarios[]> {
-
-    return this.http.get<Funcionarios>('${API_CONFIG.baseUrl}/Funcionarios');
-
+  public findAll(): Observable<Funcionarios[]> {
+    return this.http.get<Funcionarios[]>(this.apiURL);
   }
 
 }

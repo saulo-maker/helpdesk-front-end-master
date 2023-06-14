@@ -11,17 +11,7 @@ import { ClientesService } from 'src/app/services/clientes.service';
 })
 export class ClienteComponent implements OnInit{
 
-  ELEMENT_DATA: Clientes[] = [
-    {
-      id: 1,
-      cpf: '123.456.789-10',
-      nome: 'Valdinei Pereira',
-      email: 'valdiney@gmail.com',
-      senha: '1234',
-      perfis: ['0'],
-      data: '13/02/2023'
-    }
-  ]
+  ELEMENT_DATA: Clientes[] = []
 
   displayedColumns: string[] = ['id', 'nome', 'data', 'edit', 'delete'];
   dataSource = new MatTableDataSource<Clientes>(this.ELEMENT_DATA);

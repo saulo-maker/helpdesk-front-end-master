@@ -36,6 +36,7 @@ import { FuncionariosComponent } from './components/funcionarios/funcionarios.co
 import { LoginComponent } from './components/login/login.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
